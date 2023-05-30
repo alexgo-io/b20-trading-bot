@@ -83,14 +83,14 @@ see [Market Information]($market-information).
 ```
 
 ## Market Information
-| Market | stxDxMarket | stxDxMarketPricePrecision | stxDxAsset | coinGeckoId |
-| ---- | -------- | -- | ---------- | :---------- |
-| $B20 | DB20-USD | 4 | brc20-db20 | alex-db20 |
-| OXBT | OXBT-USD | 4 | brc20-oxbt | oxbt |
-| LONG | LONG-USD | 4 | brc20-long | long-bitcoin |
-| ATMT | ATMT-USD | 8 | brc20-aiptp | aiptp |
-| MAXI | MAXI-USD | 3 | brc20-maxi | maxi-ordinals |
-| PIZA | PIZA-USD | 3 | brc20-piza | pizabrc |
-| SHNT | SHNT-USD | 3 | brc20-shnt | sats-hunters |
-| DEXM | DEXM-USD | 3 | brc20-dexm | N/A |
+| Market | stxDxMarket | stxDxMarketPricePrecision | stxDxAsset  | coinGeckoId   |
+|--------|-------------|---------------------------|-------------|:--------------|
+| $B20   | DB20-USD    | 4                         | brc20-db20  | alex-db20     |
+| OXBT   | OXBT-USD    | 4                         | brc20-oxbt  | oxbt          |
+| LONG   | LONG-USD    | 4                         | brc20-long  | long-bitcoin  |
+| ATMT   | ATMT-USD    | 8                         | brc20-aiptp | aiptp         |
+| MAXI   | MAXI-USD    | 3                         | brc20-maxi  | maxi-ordinals |
+| PIZA   | PIZA-USD    | 3                         | brc20-piza  | pizabrc       |
+| SHNT   | SHNT-USD    | 3                         | brc20-shnt  | sats-hunters  |
+| DEXM   | DEXM-USD    | 3                         | brc20-dexm  | N/A           |
 
