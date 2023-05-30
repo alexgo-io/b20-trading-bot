@@ -2,13 +2,22 @@
 
 To run b20-trading-bot, please follow the following steps:
 1. [Set up the environment](#set-up-the-environment)
-2. [Update the configuration file](#update-the-configuration-file)
-3. [Run b20-trading-bot](#run-the-market-making-bot)
+2. [Get Stacks address private key](#get-stacks-address-private-key)
+3. [Update the configuration file](#update-the-configuration-file)
+4. [Run b20-trading-bot](#run-the-market-making-bot)
 
 ## Set up the environment
 ```
-> yarn add alex-stxdx-bot
+> yarn install
 ```
+
+## Get Stacks address private key
+Bot uses your account to trade and therefore requires your private key to post orders.
+
+```
+> ts-node generate-private-key 0 "<24-word secret phrases>"
+```
+
 ## Update the configuration file
 
 Samples are available as `sample.json` or `sample-coingeckoId.json`.
@@ -39,22 +48,25 @@ See the [example](#example).
 ```
 
 ### Example
+
+see [Market Information]($market-information).
+
 ```
 {
   "stxAddress": "<your Stacks address>",
   "stxPrivateKey": "<your Stacks address private key>",
-  "stxDxMarket": "DB20-USD", // see [Market Information]($market-information)
-  "stxDxMarketPricePrecision": <decimal precision to determine minimum gap>, // see [Market Information]($market-information)
-  "stxDxMarketInitialPrice": <fallback price if price source permanently not available>,
-  "stxDxAsset": "<L2 contract name>", // see [Market Information]($market-information)
+  "stxDxMarket": "DB20-USD",
+  "stxDxMarketPricePrecision": 4, // $0.0001 is the minimum increment
+  "stxDxMarketInitialPrice": 1, // if price source returns 404 error, bot falls back to this
+  "stxDxAsset": "brc20-db20",
 
-  "gapRatio": <multiplier to minimum decimals to separate each bid/ask>,
-  "totalSize": <total one-side size in $>,
-  "gridSize": <number of bid/asks on each side>,
+  "gapRatio": 200, // 200 * 0.0001 = $0.02 apart between each bid and ask
+  "totalSize": 1000, // bid / ask sizes will target $1,000 on each side
+  "gridSize": 4, // 4 bids / 4 asks
 
-  "repeatIntervalInSeconds": <bid/ask refresh frequency in seconds>,
-  "coinGeckoId": "<CoinGecko ID>", // see [Market Information]($market-information)
-  "marketPriceSource": "<CoinGecko or LastTrade>"
+  "repeatIntervalInSeconds": 60, // the positions will be refreshed every minute  
+  "marketPriceSource": "CoinGecko",
+  "coinGeckoId": "alex-db20"
 }
 ```
 
@@ -62,4 +74,11 @@ See the [example](#example).
 | Market | stxDxMarket | stxDxMarketPricePrecision | stxDxAsset | coinGeckoId |
 | ---- | -------- | -- | ---------- | :---------- |
 | $B20 | DB20-USD | 4 | brc20-db20 | alex-db20 |
+| OXBT | OXBT-USD | 4 | brc20-oxbt | oxbt |
+| LONG | LONG-USD | 4 | brc20-long | long-bitcoin |
+| ATMT | ATMT-USD | 8 | brc20-aiptp | aiptp |
+| MAXI | MAXI-USD | 3 | brc20-maxi | maxi-ordinals |
+| PIZA | PIZA-USD | 3 | brc20-piza | pizabrc |
+| SHNT | SHNT-USD | 3 | brc20-shnt | sats-hunters |
+| DEXM | DEXM-USD | 3 | brc20-dexm | N/A |
 
