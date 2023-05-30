@@ -1,0 +1,16 @@
+{
+  "stxAddress": "STFCVYY1RJDNJHST7RRTPACYHVJQDJ7R1DWTQHQA",
+  "stxPrivateKey": "6682d7f7cc8aa560a1baaf320b9771d9ca33abdf4ad2a768ce2b3573a2151e9b01",
+  "stxDxMarket": "DB20-USD",
+  "stxDxMarketPricePrecision": 4,
+  "stxDxMarketInitialPrice": 1,
+  "stxDxAsset": "brc20-db20",
+
+  "gapRatio": 3,
+  "totalSize": 5000,
+  "gridSize": 4,
+
+  "repeatIntervalInSeconds": 60,
+  "coinGeckoId": "alex-b20",
+  "marketPriceSource": "CoinGecko"
+}
