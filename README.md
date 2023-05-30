@@ -1,10 +1,26 @@
 # b20-trading-bot
 
+b20-trading-bot is a simple grid trading bot that allows B20 users to automate market making on B20.
+It currently supports 
+- market making on a single market, 
+- based on the last traded price, or CoinGecko price,
+- with trading grid configurable based on
+  - the distance between each bid and ask (`gapRatio`),
+  - the total $ size of each side (`totalSize`),
+  - the number of orders on each side (`gridSize`), and
+  - the frequency of position updates (`repeatIntervalInSeconds`)
+
 To run b20-trading-bot, please follow the following steps:
-1. [Set up the environment](#set-up-the-environment)
-2. [Get Stacks address private key](#get-stacks-address-private-key)
-3. [Update the configuration file](#update-the-configuration-file)
-4. [Run b20-trading-bot](#run-the-market-making-bot)
+1. [Clone this repo](#clone-this-repo)
+2. [Set up the environment](#set-up-the-environment)
+3. [Get Stacks address private key](#get-stacks-address-private-key)
+4. [Update the configuration file](#update-the-configuration-file)
+5. [Run b20-trading-bot](#run-the-market-making-bot)
+
+## Clone this repo
+```
+> git clone https://github.com/alexgo-io/b20-trading-bot.git
+```
 
 ## Set up the environment
 ```
