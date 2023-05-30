@@ -11,27 +11,23 @@ It currently supports
   - the frequency of position updates (`repeatIntervalInSeconds`)
 
 To run b20-trading-bot, please follow the following steps:
-1. [Clone this repo](#clone-this-repo)
-2. [Set up the environment](#set-up-the-environment)
-3. [Get Stacks address private key](#get-stacks-address-private-key)
-4. [Update the configuration file](#update-the-configuration-file)
-5. [Run b20-trading-bot](#run-the-market-making-bot)
-
-## Clone this repo
-```
-> git clone https://github.com/alexgo-io/b20-trading-bot.git
-```
+1. [Set up the environment](#set-up-the-environment)
+2. [Get Stacks address private key](#get-stacks-address-private-key)
+3. [Update the configuration file](#update-the-configuration-file)
+4. [Run b20-trading-bot](#run-the-market-making-bot)
 
 ## Set up the environment
+
+### Install Node.js
 ```
-> yarn install
+> brew install node
 ```
 
 ## Get Stacks address private key
 Bot uses your account to trade and therefore requires your private key to post orders.
 
 ```
-> ts-node generate-private-key 0 "<24-word secret phrases>"
+> npx -p alex-stxdx-bot generate-private-key 0 "<24-word secret phrases>"
 ```
 
 ## Update the configuration file
@@ -87,14 +83,14 @@ see [Market Information]($market-information).
 ```
 
 ## Market Information
-| Market | stxDxMarket | stxDxMarketPricePrecision | stxDxAsset | coinGeckoId |
-| ---- | -------- | -- | ---------- | :---------- |
-| $B20 | DB20-USD | 4 | brc20-db20 | alex-db20 |
-| OXBT | OXBT-USD | 4 | brc20-oxbt | oxbt |
-| LONG | LONG-USD | 4 | brc20-long | long-bitcoin |
-| ATMT | ATMT-USD | 8 | brc20-aiptp | aiptp |
-| MAXI | MAXI-USD | 3 | brc20-maxi | maxi-ordinals |
-| PIZA | PIZA-USD | 3 | brc20-piza | pizabrc |
-| SHNT | SHNT-USD | 3 | brc20-shnt | sats-hunters |
-| DEXM | DEXM-USD | 3 | brc20-dexm | N/A |
+| Market | stxDxMarket | stxDxMarketPricePrecision | stxDxAsset  | coinGeckoId   |
+|--------|-------------|---------------------------|-------------|:--------------|
+| $B20   | DB20-USD    | 4                         | brc20-db20  | alex-db20     |
+| OXBT   | OXBT-USD    | 4                         | brc20-oxbt  | oxbt          |
+| LONG   | LONG-USD    | 4                         | brc20-long  | long-bitcoin  |
+| ATMT   | ATMT-USD    | 8                         | brc20-aiptp | aiptp         |
+| MAXI   | MAXI-USD    | 3                         | brc20-maxi  | maxi-ordinals |
+| PIZA   | PIZA-USD    | 3                         | brc20-piza  | pizabrc       |
+| SHNT   | SHNT-USD    | 3                         | brc20-shnt  | sats-hunters  |
+| DEXM   | DEXM-USD    | 3                         | brc20-dexm  | N/A           |
 
